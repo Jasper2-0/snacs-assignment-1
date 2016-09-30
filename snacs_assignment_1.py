@@ -17,11 +17,9 @@ def main():
     DGMedium = parseEdgeFileToDiGraph(mediumFn)
     if (large): DGLarge = parseEdgeFileToDiGraph(largeFn)
 
-    
-    
-    
-    
 
+    print nx.info(DGMedium)
+    if (large): print nx.info(DGLarge)
 
     # Q2.1 How many Directed links does this network have?
     
@@ -57,33 +55,32 @@ def main():
     if (large): print "Large Network: " + str (nx.number_strongly_connected_components(DGLarge) ) 
     print "\n"
     
-    largestS = max(nx.strongly_connected_components(DGSmall), key=len)
-    largestM = max(nx.strongly_connected_components(DGMedium), key=len)
-    if (large): largestL = max(nx.strongly_connected_components(DGLarge), key=len)
-
+    largestS = max(nx.strongly_connected_component_subgraphs(DGSmall), key=len)
+    largestM = max(nx.strongly_connected_component_subgraphs(DGMedium), key=len)
+    if (large): largestL = max(nx.strongly_connected_component_subgraphs(DGLarge), key=len)
 
     
-    gCS = nx.DiGraph()
-    gCM = nx.DiGraph()
-    if (large): gCL = nx.DiGraph()
-    
-    gCS.add_nodes_from(largestS)
-    gCM.add_nodes_from(largestM)
-    if (large): gCL.add_nodes_from(largestL)
+#    gCS = nx.DiGraph()
+#    gCM = nx.DiGraph()
+#    if (large): gCL = nx.DiGraph()
+#    
+#    gCS.add_nodes_from(largestS)
+#    gCM.add_nodes_from(largestM)
+#    if (large): gCL.add_nodes_from(largestL)
     
     
     print "How many nodes are in the largest strongly connected component?"
-    print "Small Network: " + str ( nx.number_of_nodes(gCS) )
-    print "Medium Network: " + str ( nx.number_of_nodes(gCM) )
-    if (large): print "Large Network: " + str ( nx.number_of_nodes(gCL) )
+    print "Small Network: " + str ( nx.number_of_nodes(largestS) )
+    print "Medium Network: " + str ( nx.number_of_nodes(largestM) )
+    if (large): print "Large Network: " + str ( nx.number_of_nodes(largestL) )
     print "\n"    
-#
-#
-#   print "How many links are in the largest strongly connected component?"
-#   print "Small Network: " + str ( nx.number_of_edges(gCS) )
-#   print "Medium Network: " + str ( nx.number_of_edges(gCM) )
-#   if (large): print "Large Network: " + str ( nx.number_of_edges(gCL) )
-#   print "\n"    
+ 
+ 
+    print "How many links are in the largest strongly connected component?"
+    print "Small Network: " + str ( nx.number_of_edges(largestS) )
+    print "Medium Network: " + str ( nx.number_of_edges(largestM) )
+    if (large): print "Large Network: " + str ( nx.number_of_edges(largestL) )
+    print "\n"    
 
     
 def parseEdgeFileToGraph ( filename ):
