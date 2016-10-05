@@ -99,10 +99,10 @@ If this is the case we know that nodes u and v are directly connected by at leas
 #### Large Network
 
 ##### Indegree Distribution
-![Medium In Degree Distribution](diagrams/Medium_In_Degree_Distribution.png)
+![Medium In Degree Distribution](diagrams/Large_In_Degree_Distribution.png)
 
 ##### Outdegree Distribution
-![Medium Out Degree Distribution](diagrams/Medium_Out_Degree_Distribution.png)
+![Medium Out Degree Distribution](diagrams/Large_Out_Degree_Distribution.png)
 
 
 
