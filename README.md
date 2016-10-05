@@ -20,7 +20,7 @@ This repository contains my work for the first assignment of the Social Network 
 
 ## Exercise 2: Mining an Online Social Network (60p)
 
-### Q2.1 How many Directed links does this network have? | snacs_assignment_1_Q_2_1.py
+### Q2.1 How many Directed links does this network have? | [snacs_assignment_1_Q_2_1.py](https://github.com/Jasper2-0/snacs-assignment-1/blob/master/snacs_assignment_1_Q_2_1.py)
 
 - **Medium Network:** 12864
 - **Large Network:** 1731653
