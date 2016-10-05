@@ -3,6 +3,8 @@
 import networkx as nx
 import numpy as np
 
+import cPickle as pickle
+
 # /data is assumed to hold the provided graphs.
 
 tinyFn = "data/tiny.in" # tiny network, for learning / debugging purposes
@@ -20,17 +22,30 @@ def main():
     ## "### Q2.3 Give the indegree and outdegree distribution of this graph (so, for each degree value the number of times that it occurs)."
     
     print "### Q2.3 Give the indegree and outdegree distribution of this graph (so, for each degree value the number of times that it occurs).\n"
-    print "In Degree Distribution Tiny Network: "+ str(InDegreeDistribution(DGTiny))
-    print "Out Degree Distribution Tiny Network: "+ str(OutDegreeDistribution(DGTiny))
-    print ""
-    print "In Degree Distribution Small Network: "+ str(InDegreeDistribution(DGSmall))
-    print "Out Degree Distribution Small Network: "+ str(OutDegreeDistribution(DGSmall))
-    print ""
-    print "In Degree Distribution Medium Network: "+ str(InDegreeDistribution(DGMedium))
-    print "Out Degree Distribution Medium Network: "+ str(OutDegreeDistribution(DGMedium))
-    print ""
-    print "In Degree Distribution Large Network: "+ str(InDegreeDistribution(DGLarge))
-    print "Out Degree Distribution Large Network: "+ str(OutDegreeDistribution(DGLarge))
+
+    tinyInDistribution = InDegreeDistribution (DGTiny)
+    dump (tinyInDistribution,'pickles/Tiny_In_Degree_Distribution.pickle');
+    
+    tinyOutDistribution = OutDegreeDistribution (DGTiny)
+    dump (tinyOutDistribution,'pickles/Tiny_Out_Degree_Distribution.pickle');
+
+    SmallInDistribution = InDegreeDistribution (DGSmall)
+    dump (SmallInDistribution,'pickles/Small_In_Degree_Distribution.pickle');
+    
+    SmallOutDistribution = OutDegreeDistribution (DGSmall)
+    dump (SmallOutDistribution,'pickles/Small_Out_Degree_Distribution.pickle');
+
+    MediumInDistribution = InDegreeDistribution (DGMedium)
+    dump (MediumInDistribution,'pickles/Medium_In_Degree_Distribution.pickle');
+    
+    MediumOutDistribution = OutDegreeDistribution (DGMedium)
+    dump (MediumOutDistribution,'pickles/Medium_Out_Degree_Distribution.pickle');
+
+    LargeInDistribution = InDegreeDistribution (DGLarge)
+    dump (LargeInDistribution,'pickles/Large_In_Degree_Distribution.pickle');
+    
+    LargeOutDistribution = OutDegreeDistribution (DGLarge)
+    dump (LargeOutDistribution,'pickles/Large_Out_Degree_Distribution.pickle');
 
 
 def InDegreeDistribution ( DiGraph ):
@@ -58,5 +73,8 @@ def parseEdgeFileToDiGraph( filename ):
             DG.add_edge(v[0],v[1])
 
     return DG
+
+def dump(pickleVar, filename ):
+    pickle.dump( pickleVar , open(filename,'wb'))
 
 main()
