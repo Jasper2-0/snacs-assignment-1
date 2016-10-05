@@ -91,15 +91,18 @@ If this is the case we know that nodes u and v are directly connected by at leas
 #### Medium Network
 
 ##### Indegree Distribution
+![Medium In Degree Distribution](diagrams/Medium_In_Degree_Distribution.png)
 
 ##### Outdegree Distribution
+![Medium Out Degree Distribution](diagrams/Medium_Out_Degree_Distribution.png)
 
 #### Large Network
 
 ##### Indegree Distribution
+![Medium In Degree Distribution](diagrams/Medium_In_Degree_Distribution.png)
 
 ##### Outdegree Distribution
-
+![Medium Out Degree Distribution](diagrams/Medium_Out_Degree_Distribution.png)
 
 
 
@@ -214,10 +217,10 @@ How many links are in the largest strongly connected component?
 
 ### Q.2.6 Visualize medium.in
 
-For this visualization, I generated a gephiready file which added a 'Directed' property to every edge. After importing I applied the Force Atlas 2 algorithm to the graph, after it stabilized I ran the distance metric. Using the betweenness centrality for both node size and color, I re-ran the Force Atlas 2 algorithm to create more space around the largest nodes. After this, FA2 was applied again with the 'Prevent Overlap' option which created nicely clustered sets. Finally when rendering the final PDF / PNG I rendered the edges as curves, and lowered their opacity to 50% that way the edge density in different places of the graph was a bit more obvious to spot. However the lower opacity is only visible in the rendered PNG.
+For this visualization, I generated a gephiready file which added a 'Directed' property to every edge. After importing I applied the Force Atlas 2 algorithm to the graph, after it stabilized I ran the distance metric. Using the betweenness centrality for both node size and color, I re-ran the Force Atlas 2 algorithm to create more space around the largest nodes. After this, FA2 was applied again with the 'Prevent Overlap' option which created nicely clustered nodes. Finally when rendering the final PDF / PNG I rendered the edges as curves, and lowered their opacity to 50% that way the edge density in different places of the graph was a bit more obvious to spot. However the lower opacity is only visible in the rendered PNG.
 
 - [PDF](/gephi-output/snacs_assignment_1_Q_2_6.pdf)
-- [PNG](gephi-output/snacs_assignment_1_Q_2_6.png))
+- [PNG](gephi-output/snacs_assignment_1_Q_2_6.png)
 
 ![Snacs Assignment 1 Q 2 6](gephi-output/snacs_assignment_1_Q_2_6.png)
 
