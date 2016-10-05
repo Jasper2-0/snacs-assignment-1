@@ -216,8 +216,8 @@ How many links are in the largest strongly connected component?
 
 For this visualization, I generated a gephiready file which added a 'Directed' property to every edge. After importing I applied the Force Atlas 2 algorithm to the graph, after it stabilized I ran the distance metric. Using the betweenness centrality for both node size and color, I re-ran the Force Atlas 2 algorithm to create more space around the largest nodes. After this, FA2 was applied again with the 'Prevent Overlap' option which created nicely clustered sets. Finally when rendering the final PDF / PNG I rendered the edges as curves, and lowered their opacity to 50% that way the edge density in different places of the graph was a bit more obvious to spot. However the lower opacity is only visible in the rendered PNG.
 
-- [PDF]()
-- [PNG]()
+- [PDF](/gephi-output/snacs_assignment_1_Q_2_6.pdf)
+- [PNG](gephi-output/snacs_assignment_1_Q_2_6.png))
 
 ![Snacs Assignment 1 Q 2 6](gephi-output/snacs_assignment_1_Q_2_6.png)
 
