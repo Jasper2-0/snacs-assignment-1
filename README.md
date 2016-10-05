@@ -15,8 +15,22 @@
 This repository contains my work for the first assignment of the Social Network Analysis for Computer Scientists of Leiden University.
 
 
-
 ## Exercise 1: Neighborhoods (40p)
+
+### Q1.1 Give a definition of the indegree and outdegree of a node using the notion of a (reversed) neighborhood.
+
+### Q1.2 What do we know about nodes u, v ∈ V if for these nodes it holds that |N(u) ∩ N′(v)| > 0 ?
+
+### Q1.3 Explain how the k-neighborhood Nk(W) function can be used to determine if two nodes are in the same connected component of an undirected graph.
+
+###  Q1.4 Write down a definition of the diameter of a connected undirected graph using the notion of a k-neighborhood.
+
+### Q1.5 The neighborhood of a node u ∈ V can easily be obtained if the underlying data structure of the network is an adjacency list: simply access node u’s list of adjacent nodes. However, querying the existence of a link (u,v) between nodes u,v ∈ V will take O(k) time, where k is u’s degree (list length). Indeed, each of the k nodes in the neighborhood of u should be checked to see if it is equal to v. Now, assume we want to answer many (say, more than n3) link queries (u,v), checking if a link exists between u and v. Explain a simple preprocessing step to speed up the O(k) time complexity of checking link existence, without using extra memory. Discuss the time complexity of your approach.
+
+### Q1.6 A square is a path (u,v,w,x,u) such that (u,v),(v,w), (w,x),(x,u) ∈ E. Use the (k-)neighborhood function to give, either in unambiguous and precise words or using simple pseudo-code, an algorithm for counting the number of squares in a connected undirected graph with n > 3 nodes. What is the time complexity of your algorithm?
+
+### Q1.7 Use the previous notions and algorithms to give, either in unambiguous and precise words or using simple pseudo-code, an algorithm for checking if a given undirected graph is a tree.
+
 
 ## Exercise 2: Mining an Online Social Network (60p)
 
@@ -181,4 +195,4 @@ Where # is the question number. Each script produces markdown output, that was u
 
 I also added an extra network; 'Tiny' it's based on the 'Toy Network' that is used in lecture presentations. It allowed me to manually verify that my scripts were producing the intended output. 
 
-For Questions 2.1 - 2.4 I used NetworkX to answer the questions. In the case of question 2.5, computing the distance distribution for the 'Large' network with NetworkX managed to turn my Macbook Pro into a functioning remote drone (read, fans were spinning so fast they managed to lift the laptop off my desk). Joking aside, Python / NetworkX quit after a total running time of an hour with an out of memory error. So, for answering question 2.5 I switched to using Graph-Tool. It produced the shortest distance distribution after 15 mins of computation on a single core. I wasn't able to install the OpenMP enabled version of graph-tool.
+For Questions 2.1 - 2.4 I used NetworkX to answer the questions. In the case of question 2.5, computing the distance distribution for the 'Large' network with NetworkX managed to turn my Macbook Pro into a functioning remote drone (read, fans were spinning so fast they managed to lift the laptop off my desk). Joking aside, Python / NetworkX quit after a total running time of an hour with an out of memory error. So, for answering question 2.5 I switched to using Graph-Tool. It produced the shortest distance distribution after 15 mins of computation on a single core. I wasn't able to install the OpenMP enabled version of graph-tool. I'm curious how much that would speed up the computation time...
