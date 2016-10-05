@@ -19,11 +19,21 @@ This repository contains my work for the first assignment of the Social Network 
 
 ### Q1.1 Give a definition of the indegree and outdegree of a node using the notion of a (reversed) neighborhood.
 
+The indegree of node v can be expressed as the number of edges that are in the revese neighborhood (edges of the set N'(v)). 
+The outdegree of node v can be expressed as the number of edges that are in the neighborhood (edges of the set N(v) ). 
+
+
 ### Q1.2 What do we know about nodes u, v ∈ V if for these nodes it holds that |N(u) ∩ N′(v)| > 0 ?
+
+If this is the case we know that nodes u and v are directly connected by at least one connected edge. 
 
 ### Q1.3 Explain how the k-neighborhood Nk(W) function can be used to determine if two nodes are in the same connected component of an undirected graph.
 
+
+
 ###  Q1.4 Write down a definition of the diameter of a connected undirected graph using the notion of a k-neighborhood.
+
+
 
 ### Q1.5 The neighborhood of a node u ∈ V can easily be obtained if the underlying data structure of the network is an adjacency list: simply access node u’s list of adjacent nodes. However, querying the existence of a link (u,v) between nodes u,v ∈ V will take O(k) time, where k is u’s degree (list length). Indeed, each of the k nodes in the neighborhood of u should be checked to see if it is equal to v. Now, assume we want to answer many (say, more than n3) link queries (u,v), checking if a link exists between u and v. Explain a simple preprocessing step to speed up the O(k) time complexity of checking link existence, without using extra memory. Discuss the time complexity of your approach.
 
@@ -76,7 +86,23 @@ This repository contains my work for the first assignment of the Social Network 
             print "Large Network: " + str ( nx.number_of_nodes(DGLarge) )
 
 
-### Q2.3
+### Q2.3 Give the indegree and outdegree distribution of this graph
+
+#### Medium Network
+
+##### Indegree Distribution
+
+##### Outdegree Distribution
+
+#### Large Network
+
+##### Indegree Distribution
+
+##### Outdegree Distribution
+
+
+
+
 
 ### Q2.4 How many weakly conected components and how many strongly connected components does this network have? How many nodes and links are in the largest strongly connected component of this graph? | [snacs_assignment_1_Q_2_4.py](https://github.com/Jasper2-0/snacs-assignment-1/blob/master/snacs_assignment_1_Q_2_4.py)
 
@@ -141,7 +167,7 @@ How many links are in the largest strongly connected component?
             print "Large Network: " + str ( nx.number_of_edges(largestL) )
             print "\n"
 
-### Q2.5
+### Q2.5 Give the exact or approximated distance distribution of the largest strongly connected component of this graph as a diagram.
 
         def main():
             
@@ -185,7 +211,17 @@ How many links are in the largest strongly connected component?
             dist = graph_tool.stats.distance_histogram(u);
             dump(dist[0],'pickles/Large_Distance_Histogram.pickle');
 
-## Notes on elaborations
+
+### Q.2.6 Visualize medium.in
+
+For this visualization, I generated a gephiready file which added a 'Directed' property to every edge. After importing I applied the Force Atlas 2 algorithm to the graph, after it stabilized I ran the distance metric. Using the betweenness centrality for both node size and color, I re-ran the Force Atlas 2 algorithm to create more space around the largest nodes. After this, FA2 was applied again with the 'Prevent Overlap' option which created nicely clustered sets. Finally when rendering the final PDF / PNG I rendered the edges as curves, and lowered their opacity to 50% that way the edge density in different places of the graph was a bit more obvious to spot. However the lower opacity is only visible in the rendered PNG.
+
+- [PDF]()
+- [PNG]()
+
+![Snacs Assignment 1 Q 2 6](gephi-output/snacs_assignment_1_Q_2_6.png)
+
+## Notes on elaborations for Exercise 2
 
 All  questions for exercise 2 were executed in Python. For each question an appropriate script was written. The scripts also take care of reading in the edgelist, and producing the appropriate (directed) network.
 
