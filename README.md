@@ -25,20 +25,20 @@ This repository contains my work for the first assignment of the Social Network 
 - **Medium Network:** 12864
 - **Large Network:** 1731653
 
-    def main():
+        def main():
     
-        DGTiny = parseEdgeFileToDiGraph(tinyFn)
-        DGSmall = parseEdgeFileToDiGraph(smallFn)
-        DGMedium = parseEdgeFileToDiGraph(mediumFn)
-        DGLarge = parseEdgeFileToDiGraph(largeFn)
-    
-        ## Q2.1 How many Directed links does this network have?
+            DGTiny = parseEdgeFileToDiGraph(tinyFn)
+            DGSmall = parseEdgeFileToDiGraph(smallFn)
+            DGMedium = parseEdgeFileToDiGraph(mediumFn)
+            DGLarge = parseEdgeFileToDiGraph(largeFn)
         
-        print "### Q2.1 How many Directed links does this network have?"
-        print "Tiny Network: " + str( nx.number_of_edges(DGTiny) )
-        print "Small Network: " + str( nx.number_of_edges(DGSmall) )
-        print "Medium Network: " + str( nx.number_of_edges(DGMedium) )
-        print "Large Network: " + str ( nx.number_of_edges(DGLarge) )
+            ## Q2.1 How many Directed links does this network have?
+            
+            print "### Q2.1 How many Directed links does this network have?"
+            print "Tiny Network: " + str( nx.number_of_edges(DGTiny) )
+            print "Small Network: " + str( nx.number_of_edges(DGSmall) )
+            print "Medium Network: " + str( nx.number_of_edges(DGMedium) )
+            print "Large Network: " + str ( nx.number_of_edges(DGLarge) )
 
 ### Q2.2 How many users does this network have?
 
