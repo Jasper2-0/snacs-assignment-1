@@ -17,6 +17,15 @@ This repository contains my work for the first assignment of the Social Network 
 
 ## Exercise 1: Neighborhoods (40p)
 
+## Note on exercise 1:
+
+(Note to Frank)
+We discussed in our e-mail conversation in August, coming from a non-CS background it's especially the theoretical part where I need to acquire knowledge quickly, reading notation, grasping what is meant (or implicated) in the assignments. (Especially with regards to algorithms and computational complexity)  Unfortunately at this point I'm only somewhat secure in my ability to answer Q1.1 and Q1.2. I have an intuitive notion of what the k-neighborhood function might do (grow a graph by adding neighbours, and neighbours of neighbours etc, creating a subgraph in which all nodes are connected), but I'm not sure I'm interpreting the notation correctly...
+
+The past few weeks I just went along with the course, but wrestling with this exercise made me realize that I need to organize my study activities for this course a little differently. I'll use friday's lab session also to talk with Govert, and I'll keep updating this report.
+
+Already in the three lectures I've seen (and learned) enough to see how valuable this course can be to my Mediatech graduation project. 
+
 ### Q1.1 Give a definition of the indegree and outdegree of a node using the notion of a (reversed) neighborhood.
 
 The indegree of node v can be expressed as the number of edges that are in the revese neighborhood (edges of the set N'(v)). 
@@ -29,18 +38,23 @@ If this is the case we know that nodes u and v are directly connected by at leas
 
 ### Q1.3 Explain how the k-neighborhood Nk(W) function can be used to determine if two nodes are in the same connected component of an undirected graph.
 
-
+-- See Note(1)
 
 ###  Q1.4 Write down a definition of the diameter of a connected undirected graph using the notion of a k-neighborhood.
 
-
+-- See Note(1)
 
 ### Q1.5 The neighborhood of a node u ∈ V can easily be obtained if the underlying data structure of the network is an adjacency list: simply access node u’s list of adjacent nodes. However, querying the existence of a link (u,v) between nodes u,v ∈ V will take O(k) time, where k is u’s degree (list length). Indeed, each of the k nodes in the neighborhood of u should be checked to see if it is equal to v. Now, assume we want to answer many (say, more than n3) link queries (u,v), checking if a link exists between u and v. Explain a simple preprocessing step to speed up the O(k) time complexity of checking link existence, without using extra memory. Discuss the time complexity of your approach.
 
+-- See Note(1)
+
 ### Q1.6 A square is a path (u,v,w,x,u) such that (u,v),(v,w), (w,x),(x,u) ∈ E. Use the (k-)neighborhood function to give, either in unambiguous and precise words or using simple pseudo-code, an algorithm for counting the number of squares in a connected undirected graph with n > 3 nodes. What is the time complexity of your algorithm?
+
+-- See Note(1)
 
 ### Q1.7 Use the previous notions and algorithms to give, either in unambiguous and precise words or using simple pseudo-code, an algorithm for checking if a given undirected graph is a tree.
 
+-- See Note(1)
 
 ## Exercise 2: Mining an Online Social Network (60p)
 
