@@ -154,7 +154,7 @@ If this is the case we know that nodes u and v are directly connected by at leas
             return OutBinCount
 
 
-### Q2.4 How many weakly conected components and how many strongly connected components does this network have? How many nodes and links are in the largest strongly connected component of this graph? | [snacs_assignment_1_Q_2_4.py](https://github.com/Jasper2-0/snacs-assignment-1/blob/master/snacs_assignment_1_Q_2_4.py)
+### Q2.4 How many weakly connected components and how many strongly connected components does this network have? How many nodes and links are in the largest strongly connected component of this graph? | [snacs_assignment_1_Q_2_4.py](https://github.com/Jasper2-0/snacs-assignment-1/blob/master/snacs_assignment_1_Q_2_4.py)
 
 - **Number of weakly connected components Medium Network:** 9
 - **Number of weakly connected components Large Network:** 6863
