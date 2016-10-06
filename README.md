@@ -104,7 +104,54 @@ If this is the case we know that nodes u and v are directly connected by at leas
 ##### Outdegree Distribution
 ![Medium Out Degree Distribution](diagrams/Large_Out_Degree_Distribution.png)
 
-
+        def main():
+        
+            DGTiny = parseEdgeFileToDiGraph(tinyFn)
+            DGSmall = parseEdgeFileToDiGraph(smallFn)
+            DGMedium = parseEdgeFileToDiGraph(mediumFn)
+            DGLarge = parseEdgeFileToDiGraph(largeFn)
+        
+            ## "### Q2.3 Give the indegree and outdegree distribution of this graph (so, for each degree value the number of times that it occurs)."
+            
+            print "### Q2.3 Give the indegree and outdegree distribution of this graph (so, for each degree value the number of times that it occurs).\n"
+        
+            tinyInDistribution = InDegreeDistribution (DGTiny)
+            dump (tinyInDistribution,'pickles/Tiny_In_Degree_Distribution.pickle');
+            
+            tinyOutDistribution = OutDegreeDistribution (DGTiny)
+            dump (tinyOutDistribution,'pickles/Tiny_Out_Degree_Distribution.pickle');
+        
+            SmallInDistribution = InDegreeDistribution (DGSmall)
+            dump (SmallInDistribution,'pickles/Small_In_Degree_Distribution.pickle');
+            
+            SmallOutDistribution = OutDegreeDistribution (DGSmall)
+            dump (SmallOutDistribution,'pickles/Small_Out_Degree_Distribution.pickle');
+        
+            MediumInDistribution = InDegreeDistribution (DGMedium)
+            dump (MediumInDistribution,'pickles/Medium_In_Degree_Distribution.pickle');
+            
+            MediumOutDistribution = OutDegreeDistribution (DGMedium)
+            dump (MediumOutDistribution,'pickles/Medium_Out_Degree_Distribution.pickle');
+        
+            LargeInDistribution = InDegreeDistribution (DGLarge)
+            dump (LargeInDistribution,'pickles/Large_In_Degree_Distribution.pickle');
+            
+            LargeOutDistribution = OutDegreeDistribution (DGLarge)
+            dump (LargeOutDistribution,'pickles/Large_Out_Degree_Distribution.pickle');
+        
+        
+        def InDegreeDistribution ( DiGraph ):
+            inDegrees = DiGraph.in_degree().values()
+                
+            InBinCount =  np.bincount(np.array(inDegrees))
+            
+            return InBinCount
+        
+        def OutDegreeDistribution ( DiGraph ):
+            outDegrees = DiGraph.out_degree().values()
+            OutBinCount = np.bincount(np.array(outDegrees))
+            
+            return OutBinCount
 
 
 ### Q2.4 How many weakly conected components and how many strongly connected components does this network have? How many nodes and links are in the largest strongly connected component of this graph? | [snacs_assignment_1_Q_2_4.py](https://github.com/Jasper2-0/snacs-assignment-1/blob/master/snacs_assignment_1_Q_2_4.py)
@@ -170,7 +217,14 @@ How many links are in the largest strongly connected component?
             print "Large Network: " + str ( nx.number_of_edges(largestL) )
             print "\n"
 
-### Q2.5 Give the exact or approximated distance distribution of the largest strongly connected component of this graph as a diagram.
+### Q2.5 Give the exact or approximated distance distribution of the largest strongly connected component of these graphs as a diagram.
+
+#### Distance Distribution Medium Network
+![Medium Distance Distribution](diagrams/Medium_Distance_Distribution.png)
+
+#### Distance Distribution Large Network
+![Large Distance Distribution](diagrams/Large_Distance_Distribution.png)
+
 
         def main():
             
